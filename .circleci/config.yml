@@ -8,5 +8,4 @@ jobs:
       
       - run:
           name: checkout and build
-          command: git clone https://github.com/hsnuhayato/tsml -b wu_branch
-          command: cd tsml;cmake -H. -Bbuild;cd build;make install
+          command: git clone https://github.com/hsnuhayato/tsml -b wu_branch;cd tsml;cmake -H. -Bbuild;cd build;make install
