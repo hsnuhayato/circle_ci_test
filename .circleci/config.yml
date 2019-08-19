@@ -2,7 +2,9 @@ version: 2
 jobs:
   build:
     docker: # Executor タイプです。他に machine、macOS という実行タイプを指定できます
-      - image: circleci/node:4.8.2 # プライマリコンテナです。このなかでジョブコマンドが実行されます
+      - image: hsnuhayato/choreonoid1.7 # プライマリコンテナです。このなかでジョブコマンドが実行されます
     steps:
       - checkout # プロジェクトのディレクトリにあるコードをチェックアウトします
-      - run: echo "hello world" # 「echo」コマンドを実行します
+      - run:
+        name: checkout and build
+        command: git clone https://github.com/hsnuhayato/tsml -b wu_branch
