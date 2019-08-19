@@ -5,6 +5,8 @@ jobs:
       - image: hsnuhayato/choreonoid1.7 # プライマリコンテナです。このなかでジョブコマンドが実行されます
     steps:
       - checkout # プロジェクトのディレクトリにあるコードをチェックアウトします
+      
       - run:
-        name: checkout and build
-        command: git clone https://github.com/hsnuhayato/tsml -b wu_branch
+          name: checkout and build
+          command: git clone https://github.com/hsnuhayato/tsml -b wu_branch
+
